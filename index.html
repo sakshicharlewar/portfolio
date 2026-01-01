@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi Charlewar | Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  
+  <!-- AOS Animation ICONS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+    }
+    .navbar a {
+      color: #f8fafc !important;
+      font-weight: 600;
+    }
+
+    /* Hero */
+   .ai-hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #0b1c3f, #040b1d);
+}
+
+/* Text */
+.ai-hero h1 {
+  font-size: 3rem;
+}
+
+/* Social icons */
+.icon-btn {
+  color: #0dcaf0;
+  font-size: 1.4rem;
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  color: #ffffff;
+}
+
+/* AI Circle */
+.ai-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  padding: 8px;
+  background: linear-gradient(135deg, #0dcaf0, #6610f2);
+  animation: glow 3s infinite alternate;
+}
+
+.ai-circle img {
+  border-radius: 50%;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #0dcaf0;
+  }
+  to {
+    box-shadow: 0 0 40px #6610f2;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ai-hero h1 {
+    font-size: 2.2rem;
+  }
+}
+
+
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ 
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+    .section-title {
+      color: #60a5fa;
+      font-weight: 700;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+
+    /* Cards */
+    .card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      transition: all 0.4s ease;
+      color: #e5e7eb;
+    }
+    .card:hover {
+      transform: translateY(-12px) scale(1.03);
+      box-shadow: 0 15px 40px rgba(96,165,250,0.4);
+    }
+
+    /* Buttons */
+    .btn-primary {
+      background: linear-gradient(135deg, #2563eb, #60a5fa);
+      border: none;
+    }
+
+    .btn-outline-primary {
+      border-color: #60a5fa;
+      color: #60a5fa;
+    }
+    .btn-outline-primary:hover {
+      background: #60a5fa;
+      color: #020617;
+    }
+
+    /* Progress Bar */
+    .progress {
+      background: #020617;
+    }
+    .progress-bar {
+      background: linear-gradient(90deg, #2563eb, #60a5fa);
+    }
+
+    /* Footer */
+    footer {
+      background: #020617;
+      padding: 30px;
+      text-align: center;
+      color: #94a3b8;
+    }
+
+    /* Glow Animation */
+    .glow {
+      animation: glow 2.5s infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #2563eb; }
+      to { text-shadow: 0 0 25px #60a5fa; }
+    }
+
+    /* ===== Animated Skills Section ===== */
+.skills-section {
+  background: linear-gradient(135deg, #020617, #0f172a);
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(96,165,250,0.25), transparent);
+  top: -100px;
+  left: -100px;
+  animation: float 8s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(60px); }
+}
+
+.skill-card {
+  background: rgba(2, 6, 23, 0.85);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid #1e293b;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.skill-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(96,165,250,0.3), transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+}
+
+.skill-card:hover::after {
+  transform: translateX(100%);
+}
+
+.skill-card:hover {
+  transform: translateY(-15px) scale(1.04);
+  box-shadow: 0 25px 60px rgba(96,165,250,0.4);
+}
+
+.skill-heading {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #60a5fa;
+  margin-bottom: 20px;
+}
+
+.skill-item {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 10px 15px;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-item span {
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+}
+
+.skill-bar {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  width: 0%;
+  z-index: 1;
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: var(--level); }
+}
+
+/* ===== Contact Section ===== */
+.contact-section {
+  background: #0f172a; /* Dark background */
+  color: #e5e7eb;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating background glow */
+.contact-section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(96,165,250,0.15), transparent);
+  top: -50px;
+  right: -50px;
+  animation: floatGlow 8s infinite alternate;
+}
+
+@keyframes floatGlow {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(50px) rotate(45deg); }
+}
+
+/* Contact Card */
+.contact-card {
+  background: rgba(15, 23, 42, 0.85); /* Glassy effect */
+  backdrop-filter: blur(15px);
+  border-radius: 25px;
+  padding: 40px;
+  border: 1px solid rgba(96,165,250,0.3);
+  box-shadow: 0 20px 60px rgba(96,165,250,0.2);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(96,165,250,0.4);
+}
+
+/* Input fields */
+.form-control {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(96,165,250,0.3);
+  color: #e5e7eb;
+  border-radius: 15px;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.form-control:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 20px rgba(96,165,250,0.5);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+/* Send Button */
+.btn-contact {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  border-radius: 30px;
+  padding: 14px 25px;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-contact:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(96,165,250,0.6);
+}
+
+/* Projects Section */
+/* Projects Section */
+.projects-section {
+  background: #f8fafc; /* Light background */
+  padding: 80px 0;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+}
+
+.project-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(13,110,253,0.2);
+}
+
+.project-card-body {
+  padding: 20px;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0d6efd;
+  margin-bottom: 10px;
+}
+
+.project-text {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 15px;
+}
+
+.project-btn {
+  transition: all 0.3s;
+}
+
+.project-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(13,110,253,0.3);
+}
+
+/* AI Button */
+.ai-btn{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg,#0d6efd,#60a5fa);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+  z-index: 999;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+/* Chat Box */
+.ai-box{
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  background: #020617;
+  border-radius: 18px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 25px 70px rgba(96,165,250,0.5);
+  z-index: 999;
+}
+
+.ai-header{
+  background: linear-gradient(135deg,#0d6efd,#60a5fa);
+  color: white;
+  padding: 12px;
+  font-weight: 700;
+  border-radius: 18px 18px 0 0;
+}
+
+.ai-body{
+  height: 250px;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.msg{
+  padding: 10px 14px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.msg.bot{
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.msg.user{
+  background: #0d6efd;
+  color: white;
+  text-align: right;
+}
+
+.ai-footer{
+  padding: 10px;
+}
+
+
+/* Header */
+.ai-chat-header {
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  padding: 12px 15px;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Body */
+.ai-chat-body {
+  padding: 15px;
+  height: 260px;
+  overflow-y: auto;
+  background: #020617;
+}
+
+/* Messages */
+.ai-msg {
+  padding: 10px 14px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  animation: fadeUp 0.4s ease;
+}
+
+.ai-msg.bot {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.ai-msg.user {
+  background: #2563eb;
+  color: white;
+  text-align: right;
+}
+
+/* Footer */
+.ai-chat-footer {
+  display: flex;
+  border-top: 1px solid #1e293b;
+}
+
+.ai-chat-footer input {
+  flex: 1;
+  border: none;
+  padding: 12px;
+  background: #020617;
+  color: white;
+}
+
+.ai-chat-footer button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0 18px;
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand glow" href="#">Sakshi</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="ai-hero d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7 text-white">
+        <h1 class="fw-bold">
+          Hi, I'm <span class="text-info">Sakshi</span>
+        </h1>
+
+        <p class="mt-3 text-light">
+          Web Developer | Frontend Developer
+        </p>
+
+        <p class="small opacity-75">
+          Nagpur • sakshicharlewar4@gmail.com
+        </p>
+
+        <div class="mt-3">
+          <a href="https://www.linkedin.com/in/sakshi-charlewar-39733234b/ " class="icon-btn me-3"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com/sakshicharlewar" class="icon-btn"><i class="bi bi-github"></i></a>
+        </div>
+      </div>
+
+      <!-- RIGHT AI IMAGE -->
+      <div class="col-lg-5 text-center mt-5 mt-lg-0">
+        <div class="ai-circle">
+          <img src="robort.png" alt="AI Robot" class="img-fluid">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="row align-items-center">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="ph.jpeg" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6" data-aos="fade-left">
+        <p>
+        Hi, I’m Sakshi Charlewar, a passionate Web Developer and Designer. 
+I love creating modern, responsive, and user-friendly websites using HTML, CSS, JavaScript, Bootstrap, and React.js. 
+I enjoy building projects that solve real-world problems and help people interact easily with technology. 
+I’m always learning new skills and exploring creative solutions to make the web a better place.
+
+        </p>
+        <a href="#projects" class="btn btn-outline-primary mt-3">My Work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+ <section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-title">My Skills</h2>
+
+    <div class="row g-4">
+
+      <!-- Frontend -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="skill-card">
+          <h4 class="skill-heading">Frontend</h4>
+
+          <div class="skill-item" style="--level:90%">
+            <div class="skill-bar"></div>
+            <span>HTML5</span>
+          </div>
+
+          <div class="skill-item" style="--level:85%">
+            <div class="skill-bar"></div>
+            <span>CSS3</span>
+          </div>
+
+          <div class="skill-item" style="--level:75%">
+            <div class="skill-bar"></div>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="skill-item" style="--level:80%">
+            <div class="skill-bar"></div>
+            <span>Bootstrap</span>
+          </div>
+
+          <div class="skill-item" style="--level:70%">
+            <div class="skill-bar"></div>
+            <span>React.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Backend -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="skill-card">
+          <h4 class="skill-heading">Backend</h4>
+
+          <div class="skill-item" style="--level:70%">
+            <div class="skill-bar"></div>
+            <span>Node.js</span>
+          </div>
+
+          <div class="skill-item" style="--level:65%">
+            <div class="skill-bar"></div>
+            <span>Express.js</span>
+          </div>
+
+          <div class="skill-item" style="--level:60%">
+            <div class="skill-bar"></div>
+            <span>REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Database & Tools -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="skill-card">
+          <h4 class="skill-heading">Database & Tools</h4>
+
+          <div class="skill-item" style="--level:70%">
+            <div class="skill-bar"></div>
+            <span>MySQL</span>
+          </div>
+
+          <div class="skill-item" style="--level:65%">
+            <div class="skill-bar"></div>
+            <span>MongoDB</span>
+          </div>
+
+          <div class="skill-item" style="--level:75%">
+            <div class="skill-bar"></div>
+            <span>Power BI</span>
+          </div>
+
+          <div class="skill-item" style="--level:80%">
+            <div class="skill-bar"></div>
+            <span>Git & GitHub</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact -->
+ <section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-primary">Contact Me</h2>
+    <div class="row justify-content-center align-items-center g-4">
+
+      <!-- Info Column -->
+      <div class="col-md-5" data-aos="fade-right">
+        <h4 class="fw-bold mb-3">Let's Connect</h4>
+        <p>Have a project or idea? Reach out and let's discuss how we can collaborate to make it happen!</p>
+        <p class="mt-3">
+          📧 <strong>Email:</strong> sakshi@email.com <br>
+          📍 <strong>Location:</strong> India
+        </p>
+      </div>
+
+      <!-- Form Column -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="contact-card">
+          <form>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email" required>
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-contact w-100">Send Message 🚀</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-primary">My Projects</h2>
+
+    <div class="row g-4">
+
+      <!-- Project 1: CampusVote -->
+      <div class="col-md-4" data-aos="fade-up">
+        <div class="project-card">
+          <img src="campus.jpeg" alt="CampusVote Project">
+          <div class="project-card-body">
+            <h5 class="project-title">CampusVote</h5>
+            <p class="project-text">
+Campus Vote is a digital voting system designed specially for colleges and universities to conduct student elections in a secure, transparent, and efficient way. It replaces the traditional paper-based voting process with an online platform.
+            </p>
+            <a href="#" class="btn btn-primary project-btn w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="project-card">
+          <img src="eccormerse.png" alt="eccormerse website">
+          <div class="project-card-body">
+            <h5 class="project-title">eccormerse website</h5>
+            <p class="project-text">
+           An E-Commerce Website is an online platform that allows users to buy and sell products or services over the internet. It provides a digital marketplace where customers can browse products, place orders, and make online payments easily and securely.
+            </p>
+            <a href="#" class="btn btn-primary project-btn w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card">
+          <img src="Travel.png" alt="Explore to real-world">
+          <div class="project-card-body">
+            <h5 class="project-title">Explore to real-world</h5>
+            <p class="project-text">
+            Explore the Real World is a travel website designed to help users discover destinations, plan trips, and book travel services easily. The website provides complete travel information, tour packages, and booking options to make travel planning simple and enjoyable.
+            </p>
+            <a href="#" class="btn btn-primary project-btn w-100">View Details</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- AI Assistant Button -->
+<div class="ai-assistant-btn" onclick="toggleChat()">
+  <i class="bi bi-robot"></i>
+</div>
+
+<!-- AI Assistant -->
+<div class="ai-btn" onclick="toggleAI()">
+  <i class="bi bi-robot"></i>
+</div>
+
+<div class="ai-box" id="aiBox">
+  <div class="ai-header d-flex justify-content-between align-items-center">
+    <span>🤖 Sakshi AI Assistant</span>
+    <button class="btn btn-sm btn-light" onclick="toggleAI()">✖</button>
+  </div>
+
+  <div class="ai-body" id="aiBody">
+    <div class="msg bot">
+      Hi 👋 I am Sakshi's AI Assistant.  
+      Ask me about skills, projects or contact 😊
+    </div>
+  </div>
+
+  <div class="ai-footer input-group">
+    <input type="text" id="aiInput" class="form-control" placeholder="Ask here...">
+    <button class="btn btn-primary" onclick="sendMsg()">Send</button>
+  </div>
+</div>
+
+<footer>
+  © 2025 Sakshi Charlewar | All Rights Reserved
+</footer>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1200, once: true });
+</script>
+
+</body>
+</html>
